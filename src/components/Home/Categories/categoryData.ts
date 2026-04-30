@@ -1,41 +1,41 @@
 const data = [
   {
-    title: "Televisions",
+    title: "Men's Wear",
     id: 1,
     img: "/images/categories/categories-01.png",
   },
   {
-    title: "Laptop & PC",
+    title: "Women's Wear",
     id: 2,
     img: "/images/categories/categories-02.png",
   },
   {
-    title: "Mobile & Tablets",
+    title: "Designer Footwear",
     id: 3,
     img: "/images/categories/categories-03.png",
   },
   {
-    title: "Games & Videos",
+    title: "Luxury Accessories",
     id: 4,
     img: "/images/categories/categories-04.png",
   },
   {
-    title: "Home Appliances",
+    title: "Fine Jewelry",
     id: 5,
     img: "/images/categories/categories-05.png",
   },
   {
-    title: "Health & Sports",
+    title: "Handbags",
     id: 6,
     img: "/images/categories/categories-06.png",
   },
   {
-    title: "Watches",
+    title: "Activewear",
     id: 7,
     img: "/images/categories/categories-07.png",
   },
   {
-    title: "Televisions",
+    title: "Fragrances",
     id: 8,
     img: "/images/categories/categories-04.png",
   },

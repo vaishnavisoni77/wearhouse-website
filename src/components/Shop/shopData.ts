@@ -1,10 +1,10 @@
 import { Product } from "@/types/product";
 const shopData: Product[] = [
   {
-    title: "Havit HV-G69 USB Gamepad",
+    title: "Silk Evening Gown",
     reviews: 15,
-    price: 59.0,
-    discountedPrice: 29.0,
+    price: 450.0,
+    discountedPrice: 299.0,
     id: 1,
     imgs: {
       thumbnails: [
@@ -18,10 +18,10 @@ const shopData: Product[] = [
     },
   },
   {
-    title: "iPhone 14 Plus , 6/128GB",
+    title: "Cashmere Overcoat",
     reviews: 5,
     price: 899.0,
-    discountedPrice: 99.0,
+    discountedPrice: 699.0,
     id: 2,
     imgs: {
       thumbnails: [
@@ -35,10 +35,10 @@ const shopData: Product[] = [
     },
   },
   {
-    title: "Apple iMac M1 24-inch 2021",
+    title: "Italian Leather Oxfords",
     reviews: 5,
-    price: 59.0,
-    discountedPrice: 29.0,
+    price: 350.0,
+    discountedPrice: 250.0,
     id: 3,
     imgs: {
       thumbnails: [
@@ -52,10 +52,10 @@ const shopData: Product[] = [
     },
   },
   {
-    title: "MacBook Air M1 chip, 8/256GB",
+    title: "Bespoke Wool Suit",
     reviews: 6,
-    price: 59.0,
-    discountedPrice: 29.0,
+    price: 1200.0,
+    discountedPrice: 950.0,
     id: 4,
     imgs: {
       thumbnails: [
@@ -69,10 +69,10 @@ const shopData: Product[] = [
     },
   },
   {
-    title: "Apple Watch Ultra",
+    title: "Designer Leather Handbag",
     reviews: 3,
-    price: 99.0,
-    discountedPrice: 29.0,
+    price: 1500.0,
+    discountedPrice: 1200.0,
     id: 5,
     imgs: {
       thumbnails: [
@@ -86,10 +86,10 @@ const shopData: Product[] = [
     },
   },
   {
-    title: "Logitech MX Master 3 Mouse",
+    title: "Luxury Silk Tie",
     reviews: 15,
-    price: 59.0,
-    discountedPrice: 29.0,
+    price: 120.0,
+    discountedPrice: 85.0,
     id: 6,
     imgs: {
       thumbnails: [
@@ -103,10 +103,10 @@ const shopData: Product[] = [
     },
   },
   {
-    title: "Apple iPad Air 5th Gen - 64GB",
+    title: "Pearl Necklace Collection",
     reviews: 15,
-    price: 59.0,
-    discountedPrice: 29.0,
+    price: 550.0,
+    discountedPrice: 420.0,
     id: 7,
     imgs: {
       thumbnails: [
@@ -120,10 +120,10 @@ const shopData: Product[] = [
     },
   },
   {
-    title: "Asus RT Dual Band Router",
+    title: "Designer Sunglasses",
     reviews: 15,
-    price: 59.0,
-    discountedPrice: 29.0,
+    price: 320.0,
+    discountedPrice: 250.0,
     id: 8,
     imgs: {
       thumbnails: [

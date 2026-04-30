@@ -36,10 +36,10 @@ const CounDown = () => {
             </span>
 
             <h2 className="font-bold text-dark text-xl lg:text-heading-4 xl:text-heading-3 mb-3">
-              Enhance Your Music Experience
+              Exclusive Limited Edition Drop
             </h2>
 
-            <p>The Havit H206d is a wired PC headphone.</p>
+            <p>Secure your piece of our highly anticipated seasonal designer wear.</p>
 
             {/* <!-- Countdown timer --> */}
             <div

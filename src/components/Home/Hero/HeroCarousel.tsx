@@ -36,11 +36,11 @@ const HeroCarousal = () => {
             </div>
 
             <h1 className="font-semibold text-dark text-xl sm:text-3xl mb-3">
-              <a href="#">True Wireless Noise Cancelling Headphone</a>
+              <a href="#">Exquisite Fall Collection</a>
             </h1>
 
             <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at ipsum at risus euismod lobortis in
+            Discover our meticulously curated selection of premium garments, designed to elevate your everyday elegance and luxury.
             </p>
 
             <a
@@ -75,12 +75,11 @@ const HeroCarousal = () => {
             </div>
 
             <h1 className="font-semibold text-dark text-xl sm:text-3xl mb-3">
-              <a href="#">True Wireless Noise Cancelling Headphone</a>
+              <a href="#">Exquisite Fall Collection</a>
             </h1>
 
             <p>
-              Lorem ipsum dolor sit, consectetur elit nunc suscipit non ipsum
-              nec suscipit.
+              Embrace unparalleled craftsmanship with our exclusive line of bespoke suits and designer evening wear.
             </p>
 
             <a

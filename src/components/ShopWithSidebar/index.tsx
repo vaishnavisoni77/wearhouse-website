@@ -32,33 +32,33 @@ const ShopWithSidebar = () => {
 
   const categories = [
     {
-      name: "Desktop",
-      products: 10,
+      name: "T-Shirts & Polos",
+      products: 24,
       isRefined: true,
     },
     {
-      name: "Laptop",
+      name: "Shirts",
+      products: 15,
+      isRefined: false,
+    },
+    {
+      name: "Jeans & Denims",
+      products: 18,
+      isRefined: false,
+    },
+    {
+      name: "Trousers & Chinos",
       products: 12,
       isRefined: false,
     },
     {
-      name: "Monitor",
-      products: 30,
+      name: "Jackets & Hoodies",
+      products: 8,
       isRefined: false,
     },
     {
-      name: "UPS",
-      products: 23,
-      isRefined: false,
-    },
-    {
-      name: "Phone",
-      products: 10,
-      isRefined: false,
-    },
-    {
-      name: "Watch",
-      products: 13,
+      name: "Accessories",
+      products: 5,
       isRefined: false,
     },
   ];
@@ -66,15 +66,11 @@ const ShopWithSidebar = () => {
   const genders = [
     {
       name: "Men",
-      products: 10,
-    },
-    {
-      name: "Women",
-      products: 23,
+      products: 65,
     },
     {
       name: "Unisex",
-      products: 8,
+      products: 17,
     },
   ];
 

@@ -7,14 +7,39 @@ import ShippingMethod from "./ShippingMethod";
 import PaymentMethod from "./PaymentMethod";
 import Coupon from "./Coupon";
 import Billing from "./Billing";
+import { useAppSelector } from "@/redux/store";
+import { selectCartItems, selectTotalPrice } from "@/redux/features/cart-slice";
 
 const Checkout = () => {
+  const cartItems = useAppSelector(selectCartItems);
+  const subTotal = useAppSelector(selectTotalPrice);
+  const shippingFee = cartItems.length > 0 ? 15 : 0;
+  const total = subTotal + shippingFee;
+
+  const handleCheckout = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (cartItems.length === 0) {
+      alert("Your cart is empty!");
+      return;
+    }
+
+    // Construct WhatsApp Message
+    let message = "Hello Wear House Vasmat! I would like to place an order:\n\n";
+    cartItems.forEach(item => {
+      message += `${item.quantity}x ${item.title} - ₹${item.discountedPrice * item.quantity}\n`;
+    });
+    message += `\nSubtotal: ₹${subTotal}\nShipping: ₹${shippingFee}\n*Total: ₹${total}*\n`;
+    message += "\nI will provide my billing and shipping details in this chat. Please let me know how I can pay!";
+
+    const waLink = `https://wa.me/918805374073?text=${encodeURIComponent(message)}`;
+    window.open(waLink, "_blank");
+  };
   return (
     <>
       <Breadcrumb title={"Checkout"} pages={["checkout"]} />
       <section className="overflow-hidden py-20 bg-gray-2">
         <div className="max-w-[1170px] w-full mx-auto px-4 sm:px-8 xl:px-0">
-          <form>
+          <form onSubmit={handleCheckout}>
             <div className="flex flex-col lg:flex-row gap-7.5 xl:gap-11">
               {/* <!-- checkout left --> */}
               <div className="lg:max-w-[670px] w-full">
@@ -68,43 +93,25 @@ const Checkout = () => {
                       </div>
                     </div>
 
-                    {/* <!-- product item --> */}
-                    <div className="flex items-center justify-between py-5 border-b border-gray-3">
-                      <div>
-                        <p className="text-dark">USPA Signature Polo T-Shirt</p>
+                    {/* <!-- cart items --> */}
+                    {cartItems.map((item) => (
+                      <div key={item.id} className="flex items-center justify-between py-5 border-b border-gray-3">
+                        <div>
+                          <p className="text-dark">{item.title} x{item.quantity}</p>
+                        </div>
+                        <div>
+                          <p className="text-dark text-right">₹{item.discountedPrice * item.quantity}</p>
+                        </div>
                       </div>
-                      <div>
-                        <p className="text-dark text-right">$899.00</p>
-                      </div>
-                    </div>
+                    ))}
 
-                    {/* <!-- product item --> */}
-                    <div className="flex items-center justify-between py-5 border-b border-gray-3">
-                      <div>
-                        <p className="text-dark">Hackett London Chinos</p>
-                      </div>
-                      <div>
-                        <p className="text-dark text-right">$129.00</p>
-                      </div>
-                    </div>
-
-                    {/* <!-- product item --> */}
-                    <div className="flex items-center justify-between py-5 border-b border-gray-3">
-                      <div>
-                        <p className="text-dark">Lacoste Classic Crew Neck Tee</p>
-                      </div>
-                      <div>
-                        <p className="text-dark text-right">$29.00</p>
-                      </div>
-                    </div>
-
-                    {/* <!-- product item --> */}
+                    {/* <!-- shipping --> */}
                     <div className="flex items-center justify-between py-5 border-b border-gray-3">
                       <div>
                         <p className="text-dark">Shipping Fee</p>
                       </div>
                       <div>
-                        <p className="text-dark text-right">$15.00</p>
+                        <p className="text-dark text-right">₹{shippingFee.toFixed(2)}</p>
                       </div>
                     </div>
 
@@ -115,7 +122,7 @@ const Checkout = () => {
                       </div>
                       <div>
                         <p className="font-medium text-lg text-dark text-right">
-                          $1072.00
+                          ₹{total.toFixed(2)}
                         </p>
                       </div>
                     </div>

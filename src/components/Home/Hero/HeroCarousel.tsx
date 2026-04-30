@@ -28,19 +28,19 @@ const HeroCarousal = () => {
           <div className="max-w-[394px] py-10 sm:py-15 lg:py-24.5 pl-4 sm:pl-7.5 lg:pl-12.5">
             <div className="flex items-center gap-4 mb-7.5 sm:mb-10">
               <span className="block font-semibold text-heading-3 sm:text-heading-1 text-blue">
-                70%
+                80%
               </span>
               <span className="block text-dark text-sm sm:text-custom-1 sm:leading-[24px]">
-                Anniversary<br />Sale
+                Big Brands<br />Sale
               </span>
             </div>
 
             <h1 className="font-semibold text-dark text-xl sm:text-3xl mb-3">
-              <a href="#">Exquisite Fall Collection</a>
+              <a href="#">Premium Men's Wear Outlet</a>
             </h1>
 
             <p>
-            Discover our meticulously curated selection of premium garments, designed to elevate your everyday elegance and luxury.
+            Discover massive discounts on top brands including Hackett, USPA, Lacoste, and Rare Rabbit. Elevate your wardrobe today.
             </p>
 
             <a
@@ -67,19 +67,19 @@ const HeroCarousal = () => {
           <div className="max-w-[394px] py-10 sm:py-15 lg:py-26 pl-4 sm:pl-7.5 lg:pl-12.5">
             <div className="flex items-center gap-4 mb-7.5 sm:mb-10">
               <span className="block font-semibold text-heading-3 sm:text-heading-1 text-blue">
-                70%
+                80%
               </span>
               <span className="block text-dark text-sm sm:text-custom-1 sm:leading-[24px]">
-                Anniversary<br />Sale
+                Big Brands<br />Sale
               </span>
             </div>
 
             <h1 className="font-semibold text-dark text-xl sm:text-3xl mb-3">
-              <a href="#">Exquisite Fall Collection</a>
+              <a href="#">Premium Men's Wear Outlet</a>
             </h1>
 
             <p>
-              Embrace unparalleled craftsmanship with our exclusive line of bespoke suits and designer evening wear.
+              Embrace unparalleled style with our exclusive collection of premium polos, smart casuals, and formal wear.
             </p>
 
             <a

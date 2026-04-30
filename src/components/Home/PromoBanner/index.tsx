@@ -9,15 +9,15 @@ const PromoBanner = () => {
         <div className="relative z-1 overflow-hidden rounded-lg bg-[#F5F5F7] py-12.5 lg:py-17.5 xl:py-22.5 px-4 sm:px-7.5 lg:px-14 xl:px-19 mb-7.5">
           <div className="max-w-[550px] w-full">
             <span className="block font-medium text-xl text-dark mb-3">
-              Luxury Silk Gowns
+              Premium Polos (USPA & Lacoste)
             </span>
 
             <h2 className="font-bold text-xl lg:text-heading-4 xl:text-heading-3 text-dark mb-5">
-              UP TO 30% OFF
+              UP TO 80% OFF
             </h2>
 
             <p>
-              Experience the pinnacle of evening elegance with our hand-stitched silk gowns, crafted by world-renowned designers.
+              Experience the pinnacle of everyday elegance with our collection of branded polo t-shirts.
             </p>
 
             <a
@@ -50,15 +50,15 @@ const PromoBanner = () => {
 
             <div className="text-right">
               <span className="block text-lg text-dark mb-1.5">
-                Premium Leather Handbags
+                Formal Collection (Rare Rabbit)
               </span>
 
               <h2 className="font-bold text-xl lg:text-heading-4 text-dark mb-2.5">
-                Designer Collection
+                Smart Formals
               </h2>
 
               <p className="font-semibold text-custom-1 text-teal">
-                Flat 20% off
+                Flat 80% off
               </p>
 
               <a
@@ -82,11 +82,11 @@ const PromoBanner = () => {
 
             <div>
               <span className="block text-lg text-dark mb-1.5">
-                Bespoke Men's Suits
+                Smart Casuals (Hackett)
               </span>
 
               <h2 className="font-bold text-xl lg:text-heading-4 text-dark mb-2.5">
-                Up to <span className="text-orange">40%</span> off
+                Up to <span className="text-orange">80%</span> off
               </h2>
 
               <p className="max-w-[285px] text-custom-sm">

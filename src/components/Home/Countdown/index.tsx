@@ -36,10 +36,10 @@ const CounDown = () => {
             </span>
 
             <h2 className="font-bold text-dark text-xl lg:text-heading-4 xl:text-heading-3 mb-3">
-              Exclusive Limited Edition Drop
+              Flash Sale: 80% Off Premium Brands
             </h2>
 
-            <p>Secure your piece of our highly anticipated seasonal designer wear.</p>
+            <p>Secure your piece of our highly anticipated menswear clearance event.</p>
 
             {/* <!-- Countdown timer --> */}
             <div

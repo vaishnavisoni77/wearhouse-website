@@ -1,10 +1,10 @@
 import { Product } from "@/types/product";
 const shopData: Product[] = [
   {
-    title: "Silk Evening Gown",
+    title: "USPA Signature Polo T-Shirt",
     reviews: 15,
-    price: 450.0,
-    discountedPrice: 299.0,
+    price: 2500.0,
+    discountedPrice: 500.0,
     id: 1,
     imgs: {
       thumbnails: [
@@ -18,10 +18,10 @@ const shopData: Product[] = [
     },
   },
   {
-    title: "Cashmere Overcoat",
+    title: "Lacoste Classic Crew Neck Tee",
     reviews: 5,
-    price: 899.0,
-    discountedPrice: 699.0,
+    price: 3000.0,
+    discountedPrice: 600.0,
     id: 2,
     imgs: {
       thumbnails: [
@@ -35,10 +35,10 @@ const shopData: Product[] = [
     },
   },
   {
-    title: "Italian Leather Oxfords",
+    title: "Rare Rabbit Slim Fit Formal Shirt",
     reviews: 5,
-    price: 350.0,
-    discountedPrice: 250.0,
+    price: 3500.0,
+    discountedPrice: 700.0,
     id: 3,
     imgs: {
       thumbnails: [
@@ -52,10 +52,10 @@ const shopData: Product[] = [
     },
   },
   {
-    title: "Bespoke Wool Suit",
+    title: "Hackett London Chinos",
     reviews: 6,
-    price: 1200.0,
-    discountedPrice: 950.0,
+    price: 4000.0,
+    discountedPrice: 800.0,
     id: 4,
     imgs: {
       thumbnails: [
@@ -69,10 +69,10 @@ const shopData: Product[] = [
     },
   },
   {
-    title: "Designer Leather Handbag",
+    title: "USPA Casual Denim Jeans",
     reviews: 3,
-    price: 1500.0,
-    discountedPrice: 1200.0,
+    price: 3200.0,
+    discountedPrice: 640.0,
     id: 5,
     imgs: {
       thumbnails: [
@@ -86,10 +86,10 @@ const shopData: Product[] = [
     },
   },
   {
-    title: "Luxury Silk Tie",
+    title: "Lacoste Sport Zip Jacket",
     reviews: 15,
-    price: 120.0,
-    discountedPrice: 85.0,
+    price: 4500.0,
+    discountedPrice: 900.0,
     id: 6,
     imgs: {
       thumbnails: [
@@ -103,10 +103,10 @@ const shopData: Product[] = [
     },
   },
   {
-    title: "Pearl Necklace Collection",
+    title: "Rare Rabbit Classic Trousers",
     reviews: 15,
-    price: 550.0,
-    discountedPrice: 420.0,
+    price: 2800.0,
+    discountedPrice: 560.0,
     id: 7,
     imgs: {
       thumbnails: [
@@ -120,10 +120,10 @@ const shopData: Product[] = [
     },
   },
   {
-    title: "Designer Sunglasses",
+    title: "Hackett London Linen Shirt",
     reviews: 15,
-    price: 320.0,
-    discountedPrice: 250.0,
+    price: 3800.0,
+    discountedPrice: 760.0,
     id: 8,
     imgs: {
       thumbnails: [

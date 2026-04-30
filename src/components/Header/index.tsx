@@ -38,13 +38,13 @@ const Header = () => {
 
   const options = [
     { label: "All Categories", value: "0" },
-    { label: "Men's Wear", value: "1" },
-    { label: "Women's Wear", value: "2" },
-    { label: "Designer Footwear", value: "3" },
-    { label: "Luxury Accessories", value: "4" },
-    { label: "Fine Jewelry", value: "5" },
-    { label: "Handbags", value: "6" },
-    { label: "Activewear", value: "7" },
+    { label: "Casual T-Shirts", value: "1" },
+    { label: "Polo Shirts", value: "2" },
+    { label: "Formal Shirts", value: "3" },
+    { label: "Denim Jeans", value: "4" },
+    { label: "Chinos & Trousers", value: "5" },
+    { label: "Jackets", value: "6" },
+    { label: "Footwear", value: "7" },
   ];
 
   return (

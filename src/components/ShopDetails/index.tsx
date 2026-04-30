@@ -782,7 +782,7 @@ const ShopDetails = () => {
                       <p className="text-sm sm:text-base text-dark">Brand</p>
                     </div>
                     <div className="w-full">
-                      <p className="text-sm sm:text-base text-dark">Apple</p>
+                      <p className="text-sm sm:text-base text-dark">USPA</p>
                     </div>
                   </div>
 
@@ -793,7 +793,7 @@ const ShopDetails = () => {
                     </div>
                     <div className="w-full">
                       <p className="text-sm sm:text-base text-dark">
-                        iPhone 14 Plus
+                        Polo T-Shirt
                       </p>
                     </div>
                   </div>

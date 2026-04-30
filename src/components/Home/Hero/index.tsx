@@ -29,7 +29,7 @@ const Hero = () => {
                 <div className="flex items-center gap-14">
                   <div>
                     <h2 className="max-w-[153px] font-semibold text-dark text-xl mb-20">
-                      <a href="#"> iPhone 14 Plus & 14 Pro Max </a>
+                      <a href="#"> Polo T-Shirts Collection </a>
                     </h2>
 
                     <div>
@@ -61,7 +61,7 @@ const Hero = () => {
                 <div className="flex items-center gap-14">
                   <div>
                     <h2 className="max-w-[153px] font-semibold text-dark text-xl mb-20">
-                      <a href="#"> Wireless Headphone </a>
+                      <a href="#"> Premium Denim Jeans </a>
                     </h2>
 
                     <div>

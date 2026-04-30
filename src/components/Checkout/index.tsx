@@ -71,7 +71,7 @@ const Checkout = () => {
                     {/* <!-- product item --> */}
                     <div className="flex items-center justify-between py-5 border-b border-gray-3">
                       <div>
-                        <p className="text-dark">iPhone 14 Plus , 6/128GB</p>
+                        <p className="text-dark">USPA Signature Polo T-Shirt</p>
                       </div>
                       <div>
                         <p className="text-dark text-right">$899.00</p>
@@ -81,7 +81,7 @@ const Checkout = () => {
                     {/* <!-- product item --> */}
                     <div className="flex items-center justify-between py-5 border-b border-gray-3">
                       <div>
-                        <p className="text-dark">Asus RT Dual Band Router</p>
+                        <p className="text-dark">Hackett London Chinos</p>
                       </div>
                       <div>
                         <p className="text-dark text-right">$129.00</p>
@@ -91,7 +91,7 @@ const Checkout = () => {
                     {/* <!-- product item --> */}
                     <div className="flex items-center justify-between py-5 border-b border-gray-3">
                       <div>
-                        <p className="text-dark">Havit HV-G69 USB Gamepad</p>
+                        <p className="text-dark">Lacoste Classic Crew Neck Tee</p>
                       </div>
                       <div>
                         <p className="text-dark text-right">$29.00</p>

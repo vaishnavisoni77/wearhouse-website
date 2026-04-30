@@ -23,19 +23,19 @@ const ShopWithoutSidebar = () => {
         title={"Explore All Products"}
         pages={["shop", "/", "shop without sidebar"]}
       />
-      <section className="overflow-hidden relative pb-20 pt-5 lg:pt-20 xl:pt-28 bg-[#f3f4f6]">
+      <section className="overflow-hidden relative pb-20 pt-5 lg:pt-20 xl:pt-28 bg-gray-1">
         <div className="max-w-[1170px] w-full mx-auto px-4 sm:px-8 xl:px-0">
           <div className="flex gap-7.5">
             {/* // <!-- Content Start --> */}
             <div className="w-full">
-              <div className="rounded-lg bg-white shadow-1 pl-3 pr-2.5 py-2.5 mb-6">
+              <div className="rounded-lg bg-gray-2 shadow-1 pl-3 pr-2.5 py-2.5 mb-6">
                 <div className="flex items-center justify-between">
                   {/* <!-- top bar left --> */}
-                  <div className="flex flex-wrap items-center gap-4">
+                  <div className="flex flex-wrap items-center gap-4 text-white">
                     <CustomSelect options={options} />
 
                     <p>
-                      Showing <span className="text-dark">9 of 50</span>{" "}
+                      Showing <span className="text-blue">9 of 50</span>{" "}
                       Products
                     </p>
                   </div>
@@ -48,7 +48,7 @@ const ShopWithoutSidebar = () => {
                       className={`${
                         productStyle === "grid"
                           ? "bg-blue border-blue text-white"
-                          : "text-dark bg-gray-1 border-gray-3"
+                          : "text-white bg-gray-3 border-gray-4"
                       } flex items-center justify-center w-10.5 h-9 rounded-[5px] border ease-out duration-200 hover:bg-blue hover:border-blue hover:text-white`}
                     >
                       <svg
@@ -92,7 +92,7 @@ const ShopWithoutSidebar = () => {
                       className={`${
                         productStyle === "list"
                           ? "bg-blue border-blue text-white"
-                          : "text-dark bg-gray-1 border-gray-3"
+                          : "text-white bg-gray-3 border-gray-4"
                       } flex items-center justify-center w-10.5 h-9 rounded-[5px] border ease-out duration-200 hover:bg-blue hover:border-blue hover:text-white`}
                     >
                       <svg

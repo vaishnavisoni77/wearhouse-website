@@ -7,7 +7,7 @@ const PriceDropdown = () => {
 
   const [selectedPrice, setSelectedPrice] = useState({
     from: 0,
-    to: 100,
+    to: 1500,
   });
 
   return (
@@ -51,6 +51,9 @@ const PriceDropdown = () => {
               id="range-slider-gradient"
               className="margin-lg"
               step={'any'}
+              min={0}
+              max={1500}
+              defaultValue={[0, 1500]}
               onInput={(e) =>
                 setSelectedPrice({
                   from: Math.floor(e[0]),

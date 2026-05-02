@@ -224,7 +224,7 @@ const Header = () => {
                     </svg>
 
                     <span className="flex items-center justify-center font-medium text-2xs absolute -right-2 -top-2.5 bg-blue w-4.5 h-4.5 rounded-full text-white">
-                      {product.length}
+                      {product.reduce((total, item) => total + item.quantity, 0)}
                     </span>
                   </span>
 

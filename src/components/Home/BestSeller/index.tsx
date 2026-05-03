@@ -16,7 +16,7 @@ const BestSeller = async () => {
         {/* <!-- section title --> */}
         <div className="mb-10 flex items-center justify-between">
           <div>
-            <span className="flex items-center gap-2.5 font-medium text-white mb-1.5">
+            <span className="flex items-center gap-2.5 font-medium text-dark mb-1.5">
               <Image
                 src="/images/icons/icon-07.svg"
                 alt="icon"
@@ -25,7 +25,7 @@ const BestSeller = async () => {
               />
               This Month
             </span>
-            <h2 className="font-semibold text-xl xl:text-heading-5 text-white">
+            <h2 className="font-semibold text-xl xl:text-heading-5 text-dark">
               Best Sellers
             </h2>
           </div>
@@ -41,7 +41,7 @@ const BestSeller = async () => {
         <div className="text-center mt-12.5">
           <Link
             href="/shop-without-sidebar"
-            className="inline-flex font-medium text-custom-sm py-3 px-7 sm:px-12.5 rounded-md border-gray-3 border bg-gray-2 text-white ease-out duration-200 hover:bg-dark hover:text-white hover:border-transparent"
+            className="inline-flex font-medium text-custom-sm py-3 px-7 sm:px-12.5 rounded-md border-gray-3 border bg-gray-2 text-dark ease-out duration-200 hover:bg-dark hover:text-white hover:border-transparent"
           >
             View All
           </Link>

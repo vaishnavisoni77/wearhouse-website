@@ -29,11 +29,11 @@ const PromoBanner = () => {
           </div>
 
           <Image
-            src="/images/promo/promo-01.png"
+            src="https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
             alt="promo img"
-            className="absolute bottom-0 right-4 lg:right-26 -z-1"
-            width={274}
-            height={350}
+            className="hidden sm:block absolute right-4 lg:right-10 top-1/2 -translate-y-1/2 -z-1 object-cover rounded-xl shadow-lg"
+            width={300}
+            height={300}
           />
         </div>
 
@@ -41,11 +41,11 @@ const PromoBanner = () => {
           {/* <!-- promo banner small --> */}
           <div className="relative z-1 overflow-hidden rounded-lg bg-gray-2 border border-gray-3 py-10 xl:py-16 px-4 sm:px-7.5 xl:px-10">
             <Image
-              src="/images/promo/promo-02.png"
+              src="https://images.unsplash.com/photo-1594938298596-af34907a7266?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
               alt="promo img"
-              className="absolute top-1/2 -translate-y-1/2 left-3 sm:left-10 -z-1"
-              width={241}
-              height={241}
+              className="hidden sm:block absolute top-1/2 -translate-y-1/2 left-3 sm:left-10 -z-1 object-cover rounded-xl shadow-lg"
+              width={200}
+              height={200}
             />
 
             <div className="text-right">
@@ -73,9 +73,9 @@ const PromoBanner = () => {
           {/* <!-- promo banner small --> */}
           <div className="relative z-1 overflow-hidden rounded-lg bg-gray-1 border border-gray-3 py-10 xl:py-16 px-4 sm:px-7.5 xl:px-10">
             <Image
-              src="/images/promo/promo-03.png"
+              src="https://images.unsplash.com/photo-1489987707023-afc7f29f9e57?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
               alt="promo img"
-              className="absolute top-1/2 -translate-y-1/2 right-3 sm:right-8.5 -z-1"
+              className="hidden sm:block absolute top-1/2 -translate-y-1/2 right-3 sm:right-8.5 -z-1 object-cover rounded-xl shadow-lg"
               width={200}
               height={200}
             />

@@ -53,10 +53,11 @@ const HeroCarousal = () => {
 
           <div>
             <Image
-              src="/images/hero/hero-01.png"
-              alt="headphone"
-              width={351}
-              height={358}
+              src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
+              alt="premium apparel"
+              className="object-cover rounded-2xl shadow-xl"
+              width={350}
+              height={350}
             />
           </div>
         </div>
@@ -92,10 +93,11 @@ const HeroCarousal = () => {
 
           <div>
             <Image
-              src="/images/hero/hero-01.png"
-              alt="headphone"
-              width={351}
-              height={358}
+              src="https://images.unsplash.com/photo-1434389678219-16ffb4f0b2f7?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
+              alt="premium apparel"
+              className="object-cover rounded-2xl shadow-xl"
+              width={350}
+              height={350}
             />
           </div>
         </div>

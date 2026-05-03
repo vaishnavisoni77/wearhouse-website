@@ -5,22 +5,22 @@ const featureData = [
   {
     img: "/images/icons/icon-01.svg",
     title: "Free Shipping",
-    description: "For all orders ₹200",
+    description: "On all orders over ₹999",
   },
   {
     img: "/images/icons/icon-02.svg",
-    title: "1 & 1 Returns",
-    description: "Cancellation after 1 day",
+    title: "Premium Quality",
+    description: "Crafted to perfection",
   },
   {
     img: "/images/icons/icon-03.svg",
-    title: "100% Secure Payments",
-    description: "Gurantee secure payments",
+    title: "Secure Payments",
+    description: "100% safe & protected",
   },
   {
     img: "/images/icons/icon-04.svg",
-    title: "24/7 Dedicated Support",
-    description: "Anywhere & anytime",
+    title: "Dedicated Support",
+    description: "We are here for you 24/7",
   },
 ];
 

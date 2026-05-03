@@ -27,27 +27,27 @@ const HeroCarousal = () => {
         <div className="flex items-center pt-6 sm:pt-0 flex-col-reverse sm:flex-row">
           <div className="max-w-[394px] py-10 sm:py-15 lg:py-24.5 pl-4 sm:pl-7.5 lg:pl-12.5">
             <div className="flex items-center gap-4 mb-7.5 sm:mb-10">
-              <span className="block font-semibold text-heading-3 sm:text-heading-1 text-blue">
-                80%
+              <span className="block font-medium text-sm sm:text-base text-white bg-blue px-3 py-1 rounded-full uppercase tracking-wider">
+                Up to 80% Off
               </span>
-              <span className="block text-dark text-sm sm:text-custom-1 sm:leading-[24px]">
-                Big Brands<br />Sale
+              <span className="block text-dark-4 text-sm sm:text-base tracking-widest uppercase">
+                Premium Outlet
               </span>
             </div>
 
-            <h1 className="font-semibold text-dark text-xl sm:text-3xl mb-3">
-              <a href="#">Premium Men's Wear Outlet</a>
+            <h1 className="font-semibold text-dark text-xl sm:text-heading-3 mb-4 leading-tight">
+              Premium Quality.<br/>Minimal Price.
             </h1>
 
-            <p>
-            Discover massive discounts on top brands including Hackett, USPA, Lacoste, and Rare Rabbit. Elevate your wardrobe today.
+            <p className="text-dark-5 text-custom-sm sm:text-base mb-8">
+              Wear your favorite brands without hooking your pockets. We believe in delivering great quality products at minimal prices.
             </p>
 
             <a
               href="#"
-              className="inline-flex font-medium text-white text-custom-sm rounded-md bg-dark py-3 px-9 ease-out duration-200 hover:bg-blue mt-10"
+              className="inline-flex font-medium text-white text-custom-sm rounded-md bg-dark py-3.5 px-9 ease-out duration-200 hover:bg-blue"
             >
-              Shop Now
+              Explore Collection
             </a>
           </div>
 
@@ -66,27 +66,27 @@ const HeroCarousal = () => {
         <div className="flex items-center pt-6 sm:pt-0 flex-col-reverse sm:flex-row">
           <div className="max-w-[394px] py-10 sm:py-15 lg:py-26 pl-4 sm:pl-7.5 lg:pl-12.5">
             <div className="flex items-center gap-4 mb-7.5 sm:mb-10">
-              <span className="block font-semibold text-heading-3 sm:text-heading-1 text-blue">
-                80%
+              <span className="block font-medium text-sm sm:text-base text-white bg-blue px-3 py-1 rounded-full uppercase tracking-wider">
+                Up to 80% Off
               </span>
-              <span className="block text-dark text-sm sm:text-custom-1 sm:leading-[24px]">
-                Big Brands<br />Sale
+              <span className="block text-dark-4 text-sm sm:text-base tracking-widest uppercase">
+                Premium Outlet
               </span>
             </div>
 
-            <h1 className="font-semibold text-dark text-xl sm:text-3xl mb-3">
-              <a href="#">Premium Men's Wear Outlet</a>
+            <h1 className="font-semibold text-dark text-xl sm:text-heading-3 mb-4 leading-tight">
+              Uncompromised<br/>Style.
             </h1>
 
-            <p>
-              Embrace unparalleled style with our exclusive collection of premium polos, smart casuals, and formal wear.
+            <p className="text-dark-5 text-custom-sm sm:text-base mb-8">
+              Embrace unparalleled style with our exclusive collection of premium apparel. Exceptional quality that speaks for itself.
             </p>
 
             <a
               href="#"
-              className="inline-flex font-medium text-white text-custom-sm rounded-md bg-dark py-3 px-9 ease-out duration-200 hover:bg-blue mt-10"
+              className="inline-flex font-medium text-white text-custom-sm rounded-md bg-dark py-3.5 px-9 ease-out duration-200 hover:bg-blue"
             >
-              Shop Now
+              Explore Collection
             </a>
           </div>
 

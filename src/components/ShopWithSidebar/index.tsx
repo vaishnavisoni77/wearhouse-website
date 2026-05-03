@@ -6,14 +6,14 @@ import CategoryDropdown from "./CategoryDropdown";
 import GenderDropdown from "./GenderDropdown";
 import SizeDropdown from "./SizeDropdown";
 import PriceDropdown from "./PriceDropdown";
-import shopData from "../Shop/shopData";
 import SingleGridItem from "../Shop/SingleGridItem";
 import SingleListItem from "../Shop/SingleListItem";
 
-const ShopWithSidebar = () => {
+const ShopWithSidebar = ({ initialProducts }: { initialProducts: any[] }) => {
   const [productStyle, setProductStyle] = useState("grid");
   const [productSidebar, setProductSidebar] = useState(false);
   const [stickyMenu, setStickyMenu] = useState(false);
+  const shopData = initialProducts || [];
 
   const handleStickyMenu = () => {
     if (window.scrollY >= 80) {

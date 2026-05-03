@@ -16,23 +16,54 @@ const Checkout = () => {
   const shippingFee = cartItems.length > 0 ? 15 : 0;
   const total = subTotal + shippingFee;
 
-  const handleCheckout = (e: React.FormEvent) => {
+  const handleCheckout = async (e: React.FormEvent) => {
     e.preventDefault();
     if (cartItems.length === 0) {
       alert("Your cart is empty!");
       return;
     }
 
-    // Construct WhatsApp Message
-    let message = "Hello Wear House Vasmat! I would like to place an order:\n\n";
-    cartItems.forEach(item => {
-      message += `${item.quantity}x ${item.title} - ₹${item.discountedPrice * item.quantity}\n`;
-    });
-    message += `\nSubtotal: ₹${subTotal}\nShipping: ₹${shippingFee}\n*Total: ₹${total}*\n`;
-    message += "\nI will provide my billing and shipping details in this chat. Please let me know how I can pay!";
+    try {
+      // 1. Save order to MongoDB
+      const orderPayload = {
+        customerName: "Guest", // TODO: Extract from Billing/Shipping forms if needed
+        customerPhone: "1234567890",
+        items: cartItems.map((item) => ({
+          productId: item._id || null,
+          title: item.title,
+          price: item.discountedPrice,
+          quantity: item.quantity,
+        })),
+        totalAmount: total,
+        paymentMethod: "whatsapp",
+      };
 
-    const waLink = `https://wa.me/918805374073?text=${encodeURIComponent(message)}`;
-    window.open(waLink, "_blank");
+      const res = await fetch("/api/orders", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(orderPayload),
+      });
+
+      if (!res.ok) {
+        throw new Error("Failed to create order");
+      }
+
+      const { order } = await res.json();
+
+      // 2. Construct WhatsApp Message with Order ID
+      let message = `Hello Wear House Vasmat! I would like to place an order (Order ID: ${order._id}):\n\n`;
+      cartItems.forEach((item) => {
+        message += `${item.quantity}x ${item.title} - ₹${item.discountedPrice * item.quantity}\n`;
+      });
+      message += `\nSubtotal: ₹${subTotal}\nShipping: ₹${shippingFee}\n*Total: ₹${total}*\n`;
+      message += "\nI will provide my billing and shipping details in this chat. Please let me know how I can pay!";
+
+      const waLink = `https://wa.me/918805374073?text=${encodeURIComponent(message)}`;
+      window.open(waLink, "_blank");
+    } catch (err) {
+      console.error(err);
+      alert("Something went wrong while processing your order. Please try again.");
+    }
   };
   return (
     <>

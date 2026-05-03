@@ -2,16 +2,21 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import ProductItem from "@/components/Common/ProductItem";
-import shopData from "@/components/Shop/shopData";
+import connectToDatabase from "@/lib/db";
+import Product from "@/models/Product";
 
-const NewArrival = () => {
+const NewArrival = async () => {
+  await connectToDatabase();
+  const products = await Product.find({}).limit(8).lean();
+  const shopData = JSON.parse(JSON.stringify(products));
+
   return (
     <section className="overflow-hidden pt-15">
       <div className="max-w-[1170px] w-full mx-auto px-4 sm:px-8 xl:px-0">
         {/* <!-- section title --> */}
         <div className="mb-7 flex items-center justify-between">
           <div>
-            <span className="flex items-center gap-2.5 font-medium text-dark mb-1.5">
+            <span className="flex items-center gap-2.5 font-medium text-white mb-1.5">
               <svg
                 width="20"
                 height="20"
@@ -33,14 +38,14 @@ const NewArrival = () => {
               </svg>
               This Week’s
             </span>
-            <h2 className="font-semibold text-xl xl:text-heading-5 text-dark">
+            <h2 className="font-semibold text-xl xl:text-heading-5 text-white">
               New Arrivals
             </h2>
           </div>
 
           <Link
             href="/shop-with-sidebar"
-            className="inline-flex font-medium text-custom-sm py-2.5 px-7 rounded-md border-gray-3 border bg-gray-1 text-dark ease-out duration-200 hover:bg-dark hover:text-white hover:border-transparent"
+            className="inline-flex font-medium text-custom-sm py-2.5 px-7 rounded-md border-gray-3 border bg-gray-2 text-white ease-out duration-200 hover:bg-dark hover:text-white hover:border-transparent"
           >
             View All
           </Link>
@@ -48,7 +53,7 @@ const NewArrival = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-7.5 gap-y-9">
           {/* <!-- New Arrivals item --> */}
-          {shopData.map((item, key) => (
+          {shopData.map((item: any, key: number) => (
             <ProductItem item={item} key={key} />
           ))}
         </div>

@@ -21,6 +21,14 @@ const ProductSchema = new mongoose.Schema({
     thumbnails: [String],
     previews: [String],
   },
+  category: {
+    type: String,
+    default: "Uncategorized",
+  },
+  stock: {
+    type: Number,
+    default: 0,
+  },
 });
 
 const Product = mongoose.models.Product || mongoose.model("Product", ProductSchema);

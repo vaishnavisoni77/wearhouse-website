@@ -13,6 +13,7 @@ const ShopWithSidebar = ({ initialProducts }: { initialProducts: any[] }) => {
   const [productStyle, setProductStyle] = useState("grid");
   const [productSidebar, setProductSidebar] = useState(false);
   const [stickyMenu, setStickyMenu] = useState(false);
+  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const shopData = initialProducts || [];
 
   const handleStickyMenu = () => {
@@ -29,38 +30,37 @@ const ShopWithSidebar = ({ initialProducts }: { initialProducts: any[] }) => {
     { label: "Old Products", value: "2" },
   ];
 
-  const categories = [
-    {
-      name: "T-Shirts & Polos",
-      products: 24,
-      isRefined: true,
-    },
-    {
-      name: "Shirts",
-      products: 15,
-      isRefined: false,
-    },
-    {
-      name: "Jeans",
-      products: 18,
-      isRefined: false,
-    },
-    {
-      name: "Trousers & Chinos",
-      products: 12,
-      isRefined: false,
-    },
-    {
-      name: "Jackets & Hoodies",
-      products: 8,
-      isRefined: false,
-    },
-    {
-      name: "Accessories",
-      products: 5,
-      isRefined: false,
-    },
-  ];
+  // Calculate dynamic categories from shopData
+  const categoryMap = new Map<string, number>();
+  shopData.forEach((product: any) => {
+    const cat = product.category || "Uncategorized";
+    categoryMap.set(cat, (categoryMap.get(cat) || 0) + 1);
+  });
+  
+  const dynamicCategories = Array.from(categoryMap.entries()).map(([name, products]) => ({
+    name,
+    products,
+  }));
+
+  const handleCategoryChange = (categoryName: string) => {
+    if (selectedCategories.includes(categoryName)) {
+      setSelectedCategories(selectedCategories.filter(c => c !== categoryName));
+    } else {
+      setSelectedCategories([...selectedCategories, categoryName]);
+    }
+  };
+
+  const handleClearFilters = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setSelectedCategories([]);
+  };
+
+  const filteredProducts = shopData.filter((product: any) => {
+    if (selectedCategories.length > 0 && !selectedCategories.includes(product.category || "Uncategorized")) {
+      return false;
+    }
+    return true;
+  });
 
   const genders = [
     {
@@ -145,12 +145,16 @@ const ShopWithSidebar = ({ initialProducts }: { initialProducts: any[] }) => {
                   <div className="bg-white shadow-1 rounded-lg py-4 px-5">
                     <div className="flex items-center justify-between">
                       <p>Filters:</p>
-                      <button className="text-blue">Clear All</button>
+                      <button type="button" onClick={handleClearFilters} className="text-blue">Clear All</button>
                     </div>
                   </div>
 
                   {/* <!-- category box --> */}
-                  <CategoryDropdown categories={categories} />
+                  <CategoryDropdown 
+                    categories={dynamicCategories} 
+                    selectedCategories={selectedCategories}
+                    onCategoryChange={handleCategoryChange}
+                  />
 
                   {/* <!-- gender box --> */}
                   <GenderDropdown genders={genders} />
@@ -174,7 +178,7 @@ const ShopWithSidebar = ({ initialProducts }: { initialProducts: any[] }) => {
                     <CustomSelect options={options} />
 
                     <p>
-                      Showing <span className="text-dark">9 of 50</span>{" "}
+                      Showing <span className="text-dark">{filteredProducts.length} of {shopData.length}</span>{" "}
                       Products
                     </p>
                   </div>
@@ -265,7 +269,7 @@ const ShopWithSidebar = ({ initialProducts }: { initialProducts: any[] }) => {
                   : "flex flex-col gap-7.5"
                   }`}
               >
-                {shopData.map((item, key) =>
+                {filteredProducts.map((item: any, key: number) =>
                   productStyle === "grid" ? (
                     <SingleGridItem item={item} key={key} />
                   ) : (

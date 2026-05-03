@@ -7,7 +7,7 @@ export async function POST(req: Request) {
     await connectToDatabase();
     const body = await req.json();
 
-    const { title, price, discountedPrice, imgs } = body;
+    const { title, price, discountedPrice, imgs, category, stock } = body;
 
     if (!title || !price || !discountedPrice) {
       return NextResponse.json(
@@ -23,6 +23,8 @@ export async function POST(req: Request) {
       price,
       discountedPrice,
       imgs,
+      category: category || "Uncategorized",
+      stock: stock || 0,
       id: Math.floor(Math.random() * 100000), // Fallback for components still using `id` instead of `_id`
       reviews: 0,
     });

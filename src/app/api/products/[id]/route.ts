@@ -2,13 +2,13 @@ import { NextResponse } from "next/server";
 import connectToDatabase from "@/lib/db";
 import Product from "@/models/Product";
 
-export async function PUT(req: Request, { params }: { params: { id: string } }) {
+export async function PUT(req: Request, { params }: { params: Promise<{ id: string }> }) {
   try {
     await connectToDatabase();
-    const { id } = params;
+    const { id } = await params;
     const body = await req.json();
 
-    const updatedProduct = await Product.findByIdAndUpdate(
+    const updatedProduct = await (Product as any).findByIdAndUpdate(
       id,
       { $set: body },
       { new: true }
@@ -31,12 +31,12 @@ export async function PUT(req: Request, { params }: { params: { id: string } }) 
   }
 }
 
-export async function DELETE(req: Request, { params }: { params: { id: string } }) {
+export async function DELETE(req: Request, { params }: { params: Promise<{ id: string }> }) {
   try {
     await connectToDatabase();
-    const { id } = params;
+    const { id } = await params;
 
-    const deletedProduct = await Product.findByIdAndDelete(id);
+    const deletedProduct = await (Product as any).findByIdAndDelete(id);
 
     if (!deletedProduct) {
       return NextResponse.json({ message: "Product not found" }, { status: 404 });

@@ -17,7 +17,7 @@ export async function GET() {
     }
 
     // Insert all dummy data
-    await Product.insertMany(shopData);
+    await Product.insertMany(shopData as any);
 
     return NextResponse.json(
       { message: "Successfully seeded database!" },

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 const ShopWithSidebarPage = async () => {
   await connectToDatabase();
-  const products = await Product.find({}).lean();
+  const products = await Product.find().lean();
   const shopData = JSON.parse(JSON.stringify(products));
 
   return (

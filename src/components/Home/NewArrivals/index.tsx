@@ -7,7 +7,7 @@ import Product from "@/models/Product";
 
 const NewArrival = async () => {
   await connectToDatabase();
-  const products = await Product.find({}).limit(8).lean();
+  const products = await Product.find().limit(8).lean();
   const shopData = JSON.parse(JSON.stringify(products));
 
   return (

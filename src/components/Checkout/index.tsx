@@ -29,7 +29,7 @@ const Checkout = () => {
         customerName: "Guest", // TODO: Extract from Billing/Shipping forms if needed
         customerPhone: "1234567890",
         items: cartItems.map((item) => ({
-          productId: item._id || null,
+          productId: item.id || null,
           title: item.title,
           price: item.discountedPrice,
           quantity: item.quantity,

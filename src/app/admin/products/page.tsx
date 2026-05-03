@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default async function AdminProductsPage() {
   await connectToDatabase();
-  const products = await Product.find({}).sort({ createdAt: -1 }).lean();
+  const products = await Product.find().sort({ createdAt: -1 }).lean();
   const shopData = JSON.parse(JSON.stringify(products));
 
   return (
